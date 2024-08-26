@@ -187,7 +187,7 @@ addNeigboursAndCost()
        
         let currentNodeItem = graph.find((item) => item.node === currentNode);
         let currentNodeNeighbours = currentNodeItem.neighbours;
-
+ 
         //calculate cheapest cost node gh
         let accumulatorForLowest = Infinity
         let lowestCostNeighbour = null
@@ -228,38 +228,9 @@ addNeigboursAndCost()
  console.log(memory)
  }
 
- console.log(` console.log(graph)`,graph)
- let co = findTheShortestPath(graph, start)
-console.log(co)
+//  console.log(` console.log(graph)`,graph)
+//  let co = findTheShortestPath(graph, start)
+// console.log(co)
 
-
-
-
-//implementing greedy algorithm
-
-// let statesNedded = new Set([`mt`, `wa`, `or`, `id`, `nv`, `ut`, `ca`, `az`]);
-
-// let stations = {};
-// stations[`kone`] = new Set([`id`, `nv`, `ut`]);
-// stations[`ktwo`] = new Set([`wa`, `id`, `mt`]);
-// stations[`kthree`] = new Set([`or`, `nv`, `ca`]);
-// stations[`kfour`] = new Set([`nv`, `ut`]);
-// stations[`kfive`] = new Set([`ca`, `az`]);
-
-// let finalStations = new Set();
-
-
-// function findBestStation() {
-//   let coveredStates = []
-//   let startIndex = 0
-//   for(let station in stations) {
-//     console.log(station);
-//     console.log(stations[station])
-//     stations[station];
-//   }
-// }
-
-
-// findBestStation()
  
-console.log(typeof({}))
+// console.log(typeof({}))
