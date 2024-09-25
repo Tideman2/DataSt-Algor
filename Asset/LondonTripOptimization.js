@@ -24,7 +24,7 @@ function maxiimizeItenerary(attractions, totalTime) {
 
    let proccessed = []; 
    let rid = grid(totalTime, attractions.length) 
-//    console.log(rid[0])
+// console.log(rid[0])
 
    let indexOfAttraction = 0;
    let rowIndex = 0;
@@ -55,7 +55,7 @@ function maxiimizeItenerary(attractions, totalTime) {
              let itemToFillsSpace = null;
               for(let coloumn = 0; coloumn < prevRow.length; coloumn++) {
                 if(coloumn === spaceToFill) {
-                    itemToFillsSpace = prevRow[coloumn]
+                    itemToFillsSpace = prevRow[coloumn] ;
                 }
               }
              console.log(spaceToFill, itemToFillsSpace)
@@ -91,6 +91,7 @@ function maxiimizeItenerary(attractions, totalTime) {
 [7, 13],
 [2, 4],
  ];
- const totalTime = 10 ;
 
-console.log( maxiimizeItenerary(attractions, totalTime))
+ const totalTime = 10;
+
+
