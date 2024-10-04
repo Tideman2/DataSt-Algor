@@ -84,8 +84,6 @@ let fruits = [
 ]
 populate(fruits)
 
-//using  KNN for classifyin
-//the position of an element in the row will determine how big it is and the column will determine how red
 
 function calculateDistanceBetweenTheElem(...arg) {
   let pointA = arg[0].cord;
@@ -102,6 +100,9 @@ function calculateDistanceBetweenTheElem(...arg) {
 }
 
 console.log(calculateDistanceBetweenTheElem(fruits[0], fruits[fruits.length -1]));
+
+//using  KNN for classifyin
+//the position of an element in the row will determine how big it is and the column will determine how red
 
 function classifyFruit(fruit) {
   let orange = 0;
@@ -152,4 +153,5 @@ function classifyFruit(fruit) {
 }
 //gh
 
-console.log(classifyFruit(fruits[7]))
+// console.log(classifyFruit(fruits[7]))
+
