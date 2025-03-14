@@ -85,13 +85,6 @@ function maxiimizeItenerary(attractions, totalTime) {
  }
 
  // gh
- const attractions = [
-[5, 10],
-[4, 9],
-[7, 13],
-[2, 4],
- ];
 
- const totalTime = 10;
 
 

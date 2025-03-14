@@ -155,3 +155,63 @@ function classifyFruit(fruit) {
 
 // console.log(classifyFruit(fruits[7]))
 
+
+var MyCalendarTwo = function() {
+  // To store the events 
+  this.events = [];
+  this.overLappedEvents = [];
+
+  //function to get overlap of intervals
+  this.getOverlap = (interval1, interval2) => {
+  let [start1, end1] = interval1;
+  let [start2, end2] = interval2;
+   if(start1 < end2 && start2 < end1) {
+    let newStart = start1 > start2? start1: start2;
+    let newEnd = end1 < end2? end1: end2;  
+    return [newStart, newEnd];
+   };
+};
+
+//function to check if there is an overlap
+this.doesOverLap = (interval1, interval2) => {
+  let [start1, end1] = interval1;
+  let [start2, end2] = interval2;
+  if(start1 < end2 && start2 < end1) {
+  return true
+   };
+   return false
+  }
+};
+
+MyCalendarTwo.prototype.book = function(start, end) {
+
+let event = [start, end]
+   //check if its the first event we are receiving
+   if(this.events.length < 1) {
+    this.events.push(event)
+    return true
+  }
+
+  //check if start and end overlap with any overLappedEvent
+  if(this.overLappedEvents.length > 0) {
+    for(let events of this.overLappedEvents) {
+       if(this.doesOverLap(event,events)) {
+        return false
+       }
+    }
+  }
+
+//if there is any overLap between event and any of the bookedEvent get the overLap and put it in overLapped event
+  for(let bookedEvent of this.events) {
+    if(this.doesOverLap(event, bookedEvent)) {
+      this.overLappedEvents.push(this.getOverlap(event, bookedEvent))
+    }
+  }
+
+  this.events.push(event);
+  return true
+};
+
+let calender = new MyCalendarTwo()
+calender.book(5,10)
+console.log(calender)

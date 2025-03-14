@@ -41,4 +41,4 @@ function findBestStation() {
 }
 
 
-console.log(findBestStation())
+// console.log(findBestStation())

@@ -103,7 +103,7 @@ let items = [
 
  };
 
-console.log(solveKnapsack())
+// console.log(solveKnapsack())
 
 // function createGrid(rows, cols) {
 //   let grid = [];
@@ -116,4 +116,3 @@ console.log(solveKnapsack())
 
 // console.log(createGrid(3,4))
 
-let me = `karo`;
